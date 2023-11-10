@@ -1,25 +1,25 @@
 {
-  "name": "tui-jsdoc-template",
-  "version": "1.2.2",
-  "description": "Toast UI JSDoc Template",
+  "name": "aon-jsdoc-template",
+  "version": "1.0.0",
+  "description": "Aon JSDoc Template",
   "main": "publish.js",
   "scripts": {
     "serve": "gulp serve"
   },
   "authors": [
-    "NHNEnt FE Development Lab <dl_javascript@nhnent.com>"
+    "Mohamad Jamil <mohamadjamil03@hotmail.com>"
   ],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nhnent/tui.jsdoc-template"
+    "url": "https://github.com/mohamad-jamil/aon-jsdoc-template"
   },
   "keywords": [
     "jsdoc",
     "jsdoc3",
     "jsdoc-template",
     "template",
-    "tui"
+    "aon"
   ],
   "dependencies": {
     "cheerio": "^0.22.0"
