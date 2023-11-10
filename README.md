@@ -1,12 +1,10 @@
-# TUI JSDoc Template
-Toast UI JSDoc template
-
-Demo: https://nhnent.github.io/tui.jsdoc-template/latest/
+# Aon JSDoc Template
+nhn/tui-jsdoc-template with added enhancements
 
 ## Install
 
 ```
-npm i -D tui-jsdoc-template
+npm install -D aon-jsdoc-template
 ```
 
 ## Feature
@@ -19,32 +17,14 @@ TUI JSDoc template has the following features:
   * Members / Methods / Events
   * API / Examples (Tutorials) switcher
   * Resizable
-* Examples: HTML/JS source tab in example pages
 
 ![Example](https://cloud.githubusercontent.com/assets/12269563/20049432/69d2ed42-a506-11e6-980e-53b991e5ee5b.png)
-
-## Configuration
-
-([*jsdoc page - configuration*](http://usejsdoc.org/about-configuring-jsdoc.html#incorporating-command-line-options-into-the-configuration-file))
 
 ### Template
 
 ```
 "opts": {
     "template": "node_modules/tui-jsdoc-template"
-}
-```
-
-### Logo
-
-```
-"templates": {
-    "logo": {
-        "url": "http://nhnent.github.io/tui.component.tree/latest/styles/logo.png",
-        "width": "150px",
-        "height": "13px",
-        "link": "https://github.com/nhnent/tui.jsdoc-template"
-    }
 }
 ```
 
