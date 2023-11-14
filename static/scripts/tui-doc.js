@@ -51,7 +51,7 @@ $resizer.on('mousedown', function() {
     });
 });
 
-/******************* VERSION FILTER ******************/
+/****************** VERSION FILTER *******************/
 var $filterBtn = $('#filter-btn');
 var $versionDropdown = $('.dropdown-content');
 var $versionCheckbox = $versionDropdown.find('input');
@@ -78,7 +78,7 @@ $filterBtn.on('mousedown', function() {
         }
     }
     $versionDropdown.html(html);
-})
+});
 
 $versionCheckbox.on('click', function(event) {
     // populates 'versions' list with each filter that is currently checked
@@ -103,7 +103,7 @@ $versionCheckbox.on('click', function(event) {
         $shownTitles[i].hidden = false;
     }
 
-    var $hiddenTitles = $('dt:had(+ dd[hidden])');
+    var $hiddenTitles = $('dt:has(+ dd[hidden])');
     for (let i = 0; i < $hiddenTitles.length; i++) {
         $hiddenTitles[i].hidden = true;
     }
@@ -239,7 +239,7 @@ function makeListItemHtml(item, inputText) {
 }
 
 function removeWhiteSpace(value) {
-    return value.replace(/\s/g, '');
+    return value.replace(/\s+/g, '_');
 }
 
 /*************** TOOGLE SUB NAV ***************/
