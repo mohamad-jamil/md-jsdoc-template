@@ -392,6 +392,7 @@ footer {
     border-radius: 0 0 2px 2px;
     opacity: 0.9;
     filter: alpha(opacity=90);
+    z-index: 1;
 }
 .search-container ul li {
     text-align: left;
@@ -508,6 +509,7 @@ span.arrow {
     touch-action: manipulation;
     vertical-align: baseline;
     white-space: nowrap;
+    z-index: 0;
 }
 
 .dropdown-content {
