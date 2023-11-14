@@ -470,7 +470,7 @@ function buildNav(members) {
 
         members.globals.forEach(function(g) {
             if ( !hasOwnProp.call(seen, g.longname) ) {
-                // tuidoc
+                // aondoc
                 //  - Add global-typedef in hidden to search api.
                 //  - Default template did not add this.
                 if (g.kind === 'typedef') {

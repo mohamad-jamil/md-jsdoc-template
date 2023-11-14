@@ -9,7 +9,7 @@ npm install -D aon-jsdoc-template
 
 ## Feature
 
-TUI JSDoc template has the following features:
+Aon JSDoc template has the following additional features:
 
 * Navigation:
   * AutoComplete Searchbox
@@ -24,7 +24,7 @@ TUI JSDoc template has the following features:
 
 ```
 "opts": {
-    "template": "node_modules/tui-jsdoc-template"
+    "template": "node_modules/aon-jsdoc-template"
 }
 ```
 
@@ -32,7 +32,7 @@ TUI JSDoc template has the following features:
 
 ```
 "templates": {
-    "name": "Tui JSDoc Template"
+    "name": "Aon JSDoc Template"
 }
 ```
 
@@ -125,4 +125,4 @@ If `script` or `div` elements have `code-js` or `code-html` class, expose their 
 ## Development
 
 1. Use `npm run serve` or `gulp serve` command to ascertain realtime.
-3. Api-Example tab, Auto-Complete and Resize functions are written in the `static/scripts/tui-doc.js` file.
+3. Api-Example tab, Auto-Complete and Resize functions are written in the `static/scripts/aon-doc.js` file.
