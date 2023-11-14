@@ -51,6 +51,64 @@ $resizer.on('mousedown', function() {
     });
 });
 
+/******************* VERSION FILTER ******************/
+var $filterBtn = $('#filter-btn');
+var $versionDropdown = $('.dropdown-content');
+var $versionCheckbox = $versionDropdown.find('input');
+var $entries = $('dd:has(dl.details)');
+var versions = [];
+let numEntries = $entries.length;
+
+function makeFilterEntry(displayVersion) {
+    return `<input type="checkbox" id="filter-${displayVersion}" name="filter-${displayVersion}" value="${displayVersion}"><label for="filter-${displayVersion}">${displayVersion}</label><br>`;
+}
+
+$filterBtn.on('mousedown', function() {
+    let displayVersions = [];
+    for(let i = 0; i < numEntries; i++) {
+        displayVersions.push(Number($entries[i].lastElementChild.innerText.trim().split(' ').slice(-1)[0]));
+    }
+    displayVersions = Array.from(new Set(displayVersions));
+    displayVersions.sort();
+
+    let html = '<p><strong>Flow Version</strong></p>';
+    for (let i = 0; i < displayVersions.length; i++) {
+        if (displayVersions[i] != 0) {
+            html += makeFilterEntry(displayVersions[i]);
+        }
+    }
+    $versionDropdown.html(html);
+})
+
+$versionCheckbox.on('click', function(event) {
+    // populates 'versions' list with each filter that is currently checked
+    let versionClicked = Number(event.target.value);
+    if (versions.includes(versionClicked)) {
+        versions.splice(versions.indexOf(versionClicked), 1);
+    } else {
+        versions.push(versionClicked);
+    }
+
+    for (let i = 0; i < numEntries; i++) {
+        let versionNum = Number($entries[i].lastElementChild.innerText.trim().split(' ').slice(-1)[0]);
+        if (versions.length == 0 || versions.includes(versionNum)) {
+            $entries[i].hidden = false;
+        } else {
+            $entries[i].hidden = true;
+        }
+    }
+
+    var $shownTitles = $('dt:has(+ dd:not([hidden]))');
+    for (let i = 0; i < $shownTitles.length; i++) {
+        $shownTitles[i].hidden = false;
+    }
+
+    var $hiddenTitles = $('dt:had(+ dd[hidden])');
+    for (let i = 0; i < $hiddenTitles.length; i++) {
+        $hiddenTitles[i].hidden = true;
+    }
+});
+
 /*************** SEARCH - AUTOCOMPLETE ***************/
 var $searchContainer = $('#search-container');
 var $searchInput = $searchContainer.find('input');
