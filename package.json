@@ -1,6 +1,6 @@
 {
   "name": "aon-jsdoc-template",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Aon JSDoc Template",
   "main": "publish.js",
   "scripts": {
