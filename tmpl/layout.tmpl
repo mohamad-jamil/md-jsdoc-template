@@ -3,7 +3,6 @@ var templates = env.conf.templates;
 var examples = env.conf.opts.tutorials;
 var css = templates.css;
 var logo = templates.logo;
-var footerText = templates.footerText;
 var logoUrl = 'img/toast-ui.png';
 var width, height;
 var name = templates.name || package.name || title;
@@ -100,10 +99,6 @@ if (package) {
     <?js= content ?>
 </div>
 
-<footer>
-    <img class="logo" src="<?js= logoUrl?>" style="<?js= style ?>">
-    <div class="footer-text"><?js= footerText || 'NHN Entertainment. Frontend Development Lab' ?></div>
-</footer>
 <script>prettyPrint();</script>
 <script src="scripts/jquery.min.js"></script>
 <script src="scripts/tui-doc.js"></script>
