@@ -1,7 +1,7 @@
 {
   "name": "aon-jsdoc-template",
-  "version": "1.0.5",
-  "description": "Aon JSDoc Template",
+  "version": "1.0.7",
+  "description": "MD JSDoc Template",
   "main": "publish.js",
   "scripts": {
     "serve": "gulp serve"
@@ -12,14 +12,13 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mohamad-jamil/aon-jsdoc-template"
+    "url": "https://github.com/mohamad-jamil/md-jsdoc-template"
   },
   "keywords": [
     "jsdoc",
     "jsdoc3",
     "jsdoc-template",
-    "template",
-    "aon"
+    "template"
   ],
   "dependencies": {
     "cheerio": "^0.22.0"
